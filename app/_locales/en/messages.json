@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "Sherlock",
+    "description": "The name of the application"
+  },
+  "appShortName": {
+    "message": "Sherlock",
+    "description": "Short name of the application"
+  },
+  "appDescription": {
+    "message": "Spreadsheet like GUI for Firebase data.",
+    "description": "The description of the application"
+  }
+}
