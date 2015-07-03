@@ -30,9 +30,8 @@ gulp.task 'lintCoffee', ->
 gulp.task 'lintJs', ->
   gulp.src [
     'app/**/*.{js,htm,html}'
-    '!app/scripts/libs/**'
+    '!app/libs/**'
     'Gulpfile.js'
-
   ]
   .pipe g.jshint.extract() # extract js from htm(l) files
   .pipe g.jshint()
@@ -59,9 +58,8 @@ gulp.task 'lint', [
 
 # STATIC
 staticGlob = [
-  'app/images/**'
-  'app/html/**.html'
-  'app/scripts/*.js'
+  'app/resources/**'
+  'app/**/*.html'
   'app/_locales/**'
   'app/manifest.json'
   'app/**/*.{js,css}' # libs and other non-coffee
@@ -262,12 +260,12 @@ gulp.task 'buildRelease', ['lint', 'bump'], ->
   coffeeFilter = g.filter '**/*.coffee'
   jadeFilter = g.filter '**/*.jade'
   stylusFilter = g.filter '**/*.styl'
-  imagesFilter = g.filter '**/images/**'
+  imagesFilter = g.filter '**/resources/**'
   manifestFilter = g.filter '**/manifest.json'
 
   gulp.src [
     'app/**'
-    '!**/chromereload.coffee'
+    '!chromereload.coffee'
 
   ], APP_BASE
 

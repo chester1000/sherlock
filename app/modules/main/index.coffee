@@ -1,3 +1,15 @@
+'use strict'
+
+angular.module 'shorlock', []
+  .config ($stateProvider) ->
+    $stateProvider
+    .state 'aoe',
+      url: '/aoe'
+      templateUrl: '/temlpate/aoe.html'
+      controller: 'AoeCtrl'
+      data:
+        pageTitle: 'Aoe'
+
 chrome.storage.sync.get 'creds', (creds) ->
   console.log creds
 

@@ -8,15 +8,15 @@
   ],
   "incognito": "spanning",
   "icons": {
-    "16": "images/icon16.png",
-    "128": "images/icon128.png"
+    "16": "resources/icon16.png",
+    "128": "resources/icon128.png"
   },
   "default_locale": "en",
   "app": {
     "background": {
       "scripts": [
-        "scripts/chromereload.js",
-        "scripts/background.js"
+        "chromereload.js",
+        "background.js"
       ]
     }
   },
