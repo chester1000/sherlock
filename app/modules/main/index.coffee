@@ -1,24 +1,11 @@
 'use strict'
 
-angular.module 'shorlock', []
-  .config ($stateProvider) ->
+angular.module 'sherlock', []
+  .config ($stateProvider, $locationProvider) ->
     $stateProvider
     .state 'aoe',
       url: '/aoe'
-      templateUrl: '/temlpate/aoe.html'
+      templateUrl: '/template/aoe.html'
       controller: 'AoeCtrl'
-      data:
-        pageTitle: 'Aoe'
 
-chrome.storage.sync.get 'creds', (creds) ->
-  console.log creds
-
-  unless creds.creds
-    console.log 'TODO: show already added cards'
-    # chrome.storage.sync.set
-    #   creds: [
-    #     url: 'flickering-fire-1820'
-    #     secret: '7xWItk44163bVRWtDjwgJz7fnZy4F8FiUgbFquYv'
-    #   ]
-
-  console.log 'add the add card'
+    $locationProvider.html5Mode true
